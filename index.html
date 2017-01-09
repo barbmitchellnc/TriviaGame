@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+    <!-- Our CSS style sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--div wrapper contains all content of the page-->
+        <h1>Dynamite Disney Trivia!</h1>
+        <!-- Div for start button -->
+        <div id="buttons">
+            <button id="start">Start</button>
+        </div>
+        <!--div quiz1 contains both quiz questions and timer- shown when start button is clicked-->
+        <div id="quiz1">
+            <div id="timer" style="color:red,font-size:24px">Time remaining
+                <br> <span id="display" style="color:red">02:00</span></div>
+            <div class="name">
+                <!--Questions for the Trivia questions-->
+                <p class="question">1. What is the name of Mickey's girlfriend?</p>
+                <ul class="answers">
+                    <input type="radio" name="q1" value="a" id="q1a">
+                    <label for="q1a">Missy</label>
+                    <br/>
+                    <input type="radio" name="q1" value="b" id="q1b">
+                    <label for="q1b">Minnie</label>
+                    <br/>
+                    <input type="radio" name="q1" value="c" id="q1c">
+                    <label for="q1c">Mulan</label>
+                    <br/>
+                    <input type="radio" name="q1" value="d" id="q1d">
+                    <label for="q1d">Fred</label>
+                    <br/>
+                </ul>
+                <p class="question">2. What is the name of Maleficient's pet raven?</p>
+                <ul class="answers">
+                    <input type="radio" name="q2" value="a" id="q2a">
+                    <label for="q2a">Arturo</label>
+                    <br/>
+                    <input type="radio" name="q2" value="b" id="q2b">
+                    <label for="q2b">Diablo</label>
+                    <br/>
+                    <input type="radio" name="q2" value="c" id="q2c">
+                    <label for="q2c">Lucifer</label>
+                    <br/>
+                    <input type="radio" name="q2" value="d" id="q2d">
+                    <label for="q2d"></label>Bastien
+                    <br/>
+                </ul>
+                <p class="question">3. What were the names of the brothers that founded Walt Disney Company?</p>
+                <ul class="answers">
+                    <input type="radio" name="q3" value="a" id="q3a">
+                    <label for="q3a">Walt and Harold Disney</label>
+                    <br/>
+                    <input type="radio" name="q3" value="b" id="q3b">
+                    <label for="q3b">Walt and Charles Disney</label>
+                    <br/>
+                    <input type="radio" name="q3" value="c" id="q3c">
+                    <label for="q3c">Walt and Lawrence Disney</label>
+                    <br/>
+                    <input type="radio" name="q3" value="d" id="q3d">
+                    <label for="q3d">Walt and Roy Disney</label>
+                    <br/>
+                </ul>
+                <p class="question">4. Who are the Cinderella's wicked stepsisters?</p>
+                <ul class="answers">
+                    <input type="radio" name="q4" value="a" id="q4a">
+                    <label for="q4a">Rhonda and Vera</label>
+                    <br/>
+                    <input type="radio" name="q4" value="b" id="q4b">
+                    <label for="q4b">Darla and Cindy</label>
+                    <br/>
+                    <input type="radio" name="q4" value="c" id="q4c">
+                    <label for="q4c">Lucille and Portia</label>
+                    <br/>
+                    <input type="radio" name="q4" value="d" id="q4d">
+                    <label for="q4d">Drizella and Anastasia</label>
+                    <br/>
+                </ul>
+                <p class="question">5. What is the name of Mickey's dog?</p>
+                <ul class="answers">
+                    <input type="radio" name="q5" value="a" id="q5a">
+                    <label for="q5a">Pluto</label>
+                    <br/>
+                    <input type="radio" name="q5" value="b" id="q5b">
+                    <label for="q5b">Mercury</label>
+                    <br/>
+                    <input type="radio" name="q5" value="c" id="q5c">
+                    <label for="q5c">Goofy</label>
+                    <br/>
+                    <input type="radio" name="q5" value="d" id="q5d">
+                    <label for="q5d">Neptune</label>
+                    <br/>
+                </ul>
+                <p class="question">6. What movie is Prince Eric from?</p>
+                <ul class="answers">
+                    <input type="radio" name="q6" value="a" id="q6a">
+                    <label for="q6a">Cinderella</label>
+                    <br/>
+                    <input type="radio" name="q6" value="b" id="q6b">
+                    <label for="q6b">The Little Mermaid</label>
+                    <br/>
+                    <input type="radio" name="q6" value="c" id="q6c">
+                    <label for="q6c">Beauty and the Beast</label>
+                    <br/>
+                    <input type="radio" name="q6" value="d" id="q6d">
+                    <label for="q6d">Sleeping Beauty</label>
+                    <br/>
+                </ul>
+                <p class="question">7. Who is Aladdin's love interest?</p>
+                <ul class="answers">
+                    <input type="radio" name="q7" value="a" id="q7a">
+                    <label for="q7a">Ariel</label>
+                    <br/>
+                    <input type="radio" name="q7" value="b" id="q7b">
+                    <label for="q7b">Belle</label>
+                    <br/>
+                    <input type="radio" name="q7" value="c" id="q7c">
+                    <label for="q7c">Jasmine</label>
+                    <br/>
+                    <input type="radio" name="q7" value="d" id="q7d">
+                    <label for="q7d">Tianna</label>
+                    <br/>
+                </ul>
+                <p class="question">8. What is Sleeping Beauty's real name?</p>
+                <ul class="answers">
+                    <input type="radio" name="q8" value="a" id="q8a">
+                    <label for="q8a">Loralei</label>
+                    <br/>
+                    <input type="radio" name="q8" value="b" id="q8b">
+                    <label for="q8b">Astrid</label>
+                    <br/>
+                    <input type="radio" name="q8" value="c" id="q8c">
+                    <label for="q8c">Briana</label>
+                    <br/>
+                    <input type="radio" name="q8" value="d" id="q8d">
+                    <label for="q8d">Aurora</label>
+                    <br/>
+                </ul>
+                <p class="question">9. What is name of Cinderella's evil stepmother?</p>
+                <ul class="answers">
+                    <input type="radio" name="q9" value="a" id="q9a">
+                    <label for="q9a">Lady Hamilton</label>
+                    <br/>
+                    <input type="radio" name="q9" value="b" id="q9b">
+                    <label for="q9b">Lady Belmont</label>
+                    <br/>
+                    <input type="radio" name="q9" value="c" id="q9c">
+                    <label for="q9c">Lady Tremaine</label>
+                    <br/>
+                    <input type="radio" name="q9" value="d" id="q9d">
+                    <label for="q9d">Madame Charlotte</label>
+                    <br/>
+                </ul>
+                <p class="question">10. Which heroine loves to read?</p>
+                <ul class="answers">
+                    <input type="radio" name="q10" value="a" id="q10a">
+                    <label for="q10a">Cinderella</label>
+                    <br/>
+                    <input type="radio" name="q10" value="b" id="q10b">
+                    <label for="q10b">Ariel</label>
+                    <br/>
+                    <input type="radio" name="q10" value="c" id="q10c">
+                    <label for="q10c">Aurora</label>
+                    <br/>
+                    <input type="radio" name="q10" value="d" id="q10d">
+                    <label for="q10d">Belle</label>
+                    <br/>
+                </ul>
+                <br/>
+            </div>
+            <div>
+                <button id="results">Check Answers</button>
+            </div>
+        </div>
+        <div id="quizResults">
+        </div>
+</body>
+
+</html>
