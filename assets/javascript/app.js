@@ -15,7 +15,7 @@
 
      reset: function() {
 
-         stopwatch.time =122;
+         stopwatch.time = 122;
 
 
          // DONE: Change the "display" div to "2:00."
@@ -31,9 +31,16 @@
          // DONE: Use clearInterval to stop the count here.
          //When time is equal to zero, number correct/incorrect appears
          clearInterval(counter);
-         $("#quizresults").html("<h3> Time is up! </h3><br>Number Correct:" + correct + "<br>Number Incorrect" + incorrect);
-         
+         $('#quiz1').hide();
 
+
+         if (stopwatch.count <= 0) {
+             $("#quizResults").html("<h3> Time is up. Did You Earn Your Mickey Ears?>br>Number Correct:" + correct + "<br>Number Incorrect" + incorrect + "<br><img src=assets/images/thumbsup.jpg></h3>");
+         } else {
+             $("#quizResults").html("<h3> Did You Earn Your Mickey Ears?<br>Number Correct:" + correct + "<br>Number Incorrect" + incorrect + "<br><img src=assets/images/thumbsup.jpg></h3>");
+         }
+
+         $('#buttons').hide();
      },
      count: function() {
 
@@ -110,67 +117,76 @@
 
      //compare input to answer and update counter
 
-     if ($("input[name='q1']:checked").val() != "b") {
+     if ($("input[name='q1']:checked").val() == "b") {
          correct++;
      } else {
          incorrect++;
      }
      console.log(correct);
-
-     if ($("input[name='q2']:checked").val() != "b") {
+     console.log(incorrect);
+     if ($("input[name='q2']:checked").val() == "b") {
+         correct++;
+     } else {
+         incorrect++;
+     }
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q3']:checked").val() == "d") {
+         correct++;
+     } else {
+         incorrect++;
+     }
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q4']:checked").val() == "d") {
+         correct++;
+     } else {
+         incorrect++;
+     }
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q5']:checked").val() == "c") {
          correct++;
      } else {
          incorrect++;
      }
 
-     if ($("input[name='q3']:checked").val() != "d") {
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q6']:checked").val() == "b") {
          correct++;
      } else {
          incorrect++;
      }
 
-     if ($("input[name='q4']:checked").val() != "d") {
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q7']:checked").val() == "c") {
          correct++;
      } else {
          incorrect++;
      }
-
-     if ($("input[name='q5']:checked").val() != "a") {
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q8']:checked").val() == "d") {
          correct++;
      } else {
          incorrect++;
      }
-
-
-     if ($("input[name='q6']:checked").val() != "b") {
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q9']:checked").val() == "c") {
          correct++;
      } else {
          incorrect++;
      }
-
-
-     if ($("input[name='q7']:checked").val() != "c") {
+     console.log(correct);
+     console.log(incorrect);
+     if ($("input[name='q10']:checked").val() == "d") {
          correct++;
      } else {
          incorrect++;
      }
-
-     if ($("input[name='q8']:checked").val() != "d") {
-         correct++;
-     } else {
-         incorrect++;
-     }
-
-     if ($("input[name='q9']:checked").val() != "c") {
-         correct++;
-     } else {
-         incorrect++;
-     }
-
-     if ($("input[name='q10']:checked").val() != "d") {
-         correct++;
-     } else {
-         incorrect++;
-     }
-
+     console.log(correct);
+     console.log(incorrect);
  }
